@@ -1,0 +1,303 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Almost-White: #fafafa;
+  --Medium-Gray: #696969;
+  --Almost-Black: #141414;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header img:nth-of-type(2) {
+  height: 20px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+header section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  width: 250px;
+  height: 100%;
+  background-color: var(--Almost-White);
+  z-index: 1;
+}
+
+header section button,
+header section div button {
+  background-color: var(--Almost-White);
+  cursor: pointer;
+  border: none;
+  display: block;
+  margin: 20px 10px;
+  color: var(--Medium-Gray);
+  font-size: 16px;
+}
+
+header section button img {
+  margin-left: 180px;
+}
+
+header section div:nth-of-type(2) button {
+  margin: 20px auto;
+  width: 80%;
+  padding: 10px 0;
+}
+
+header section div:nth-of-type(2) button:nth-of-type(2) {
+  border: 2px solid var(--Medium-Gray);
+  border-radius: 15px;
+  padding: 5px 0;
+}
+
+header section div button img {
+  margin-left: 10px;
+}
+
+header section .disapper-ul,
+header .disapper-sec {
+  display: none;
+}
+
+header section .apper-ul,
+header .apper-sec {
+  display: block;
+}
+
+header section ul li {
+  list-style: none;
+  margin: 10px 0 10px 30px;
+  color: var(--Medium-Gray);
+}
+
+header section ul li img {
+  margin-right: 10px;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main section.img {
+  background-image: url(images/image-hero-mobile.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+main section {
+  text-align: center;
+  margin: 30px 0;
+}
+
+main section h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+main section p {
+  color: var(--Medium-Gray);
+  font-size: 18px;
+  line-height: 25px;
+}
+
+main section button {
+  margin: 30px 0 45px;
+  height: 40px;
+  width: 130px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: var(--Almost-Black);
+  color: var(--Almost-White);
+  font-weight: 600;
+}
+
+button:hover {
+  color: #000;
+  font-weight: 500;
+}
+
+main section button:hover {
+  color: var(--Almost-Black);
+  background-color: var(--Almost-White);
+  cursor: pointer;
+}
+
+main section .images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+main section .images img {
+  width: 80px;
+}
+
+@media (min-width: 900px) {
+  header {
+    height: fit-content;
+    padding-bottom: 0;
+    background-color: var(--Almost-White);
+  }
+
+  header .open-menu,
+  header .close-menu {
+    display: none;
+  }
+
+  header img#logo {
+    width: 70px;
+    height: 20px;
+    position: relative;
+    top: 10px;
+  }
+
+  header .disapper-sec {
+    position: relative;
+    display: flex;
+    height: fit-content;
+    width: 90%;
+    margin-top: -40px;
+  }
+
+  header section div {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 5;
+  }
+
+  header section div:nth-of-type(1) {
+    width: 52%;
+  }
+
+  header section div:nth-of-type(2) {
+    width: 30%;
+    margin-left: auto;
+  }
+
+  header section div:nth-of-type(1) button img {
+    width: 10px;
+    height: 8px;
+  }
+
+  header section div ul:nth-of-type(1) li span {
+    margin-left: 5px;
+  }
+
+  header section div ul:nth-of-type(1) li {
+    padding: 0 5px;
+  }
+
+  header section div ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgb(0, 0, 0, 0.2);
+  }
+
+  header section div ul:nth-of-type(2) {
+    left: 35%;
+    padding: 5px 10px;
+  }
+
+  header section div ul:nth-of-type(2) li {
+    margin: 10px 0;
+  }
+
+  header section div ul li {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  header section div ul li span {
+    margin-left: -20px;
+  }
+
+  header section div ul li img {
+    margin-right: 0px;
+    object-fit: none;
+    position: relative;
+    left: -10px;
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 100px;
+  }
+
+  main section.img {
+    background-image: url(images/image-hero-desktop.png);
+    width: 400px;
+    height: 535px;
+    margin-top: -80px;
+    order: 2;
+  }
+
+  main section {
+    height: 400px;
+    width: 50%;
+    text-align: left;
+  }
+
+  main section h1 {
+    font-size: 52px;
+  }
+
+  main section .images {
+    margin: 50px 0 0 -50px;
+  }
+
+  main section .images img {
+    width: 60px;
+  }
+}
+
+@media (min-width: 1300px) {
+  header section div:nth-of-type(1) {
+    width: 450px;
+  }
+
+  header section div:nth-of-type(2) {
+    width: 260px;
+  }
+
+  main {
+    width: 80%;
+  }
+
+  main section {
+    width: 32%;
+    margin-top: 8px;
+  }
+
+  main section h1 {
+    font-size: 55px;
+  }
+}
